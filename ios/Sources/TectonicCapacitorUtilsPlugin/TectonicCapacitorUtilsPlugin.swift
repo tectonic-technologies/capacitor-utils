@@ -12,7 +12,7 @@ public class TectonicCapacitorUtilsPlugin: CAPPlugin, CAPBridgedPlugin {
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "getAPNSToken", returnType: CAPPluginReturnPromise)
     ]
-    private let implementation = TectonicCapacitorUtils()
+    private let implementation = TectonicCapacitorUtils.shared
 
     @objc func getAPNSToken(_ call: CAPPluginCall) {
         let token = implementation.getAPNSToken()

@@ -6,11 +6,28 @@ import TectonicTechnologiesCapacitorUtils
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    private let utils = TectonicCapacitorUtils()
+    private let utils = TectonicCapacitorUtils.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        
+        // For testing: Set a sample APNS token
+        // let sampleTokenHex = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+        // var sampleTokenData = Data()
+        // var index = sampleTokenHex.startIndex
+        // while index < sampleTokenHex.endIndex {
+        //     let nextIndex = sampleTokenHex.index(index, offsetBy: 2)
+        //     if nextIndex <= sampleTokenHex.endIndex {
+        //         let hexByte = String(sampleTokenHex[index..<nextIndex])
+        //         if let byte = UInt8(hexByte, radix: 16) {
+        //             sampleTokenData.append(byte)
+        //         }
+        //     }
+        //     index = nextIndex
+        // }
+        // utils.setAPNSToken(sampleTokenData)
+        
+        // return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
