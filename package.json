@@ -1,6 +1,6 @@
 {
   "name": "@tectonic-technologies/capacitor-utils",
-  "version": "0.0.1",
+  "version": "0.0.2-0",
   "description": "A capacitor plugin that provides various utility methods for capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
