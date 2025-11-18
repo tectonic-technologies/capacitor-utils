@@ -1,3 +1,3 @@
 export interface TectonicCapacitorUtilsPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getAPNSToken(): Promise<{ token: string | null }>;
 }

@@ -12,11 +12,9 @@ public class TectonicCapacitorUtilsPlugin extends Plugin {
     private TectonicCapacitorUtils implementation = new TectonicCapacitorUtils();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
-
+    public void getAPNSToken(PluginCall call) {
         JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
+        ret.put("token", implementation.getAPNSToken());
         call.resolve(ret);
     }
 }
